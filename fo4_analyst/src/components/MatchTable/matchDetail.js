@@ -18,8 +18,13 @@ function MatchDetail(props) {
         return player.spPosition !== 28
     })
 
-    const homeSquad = makeSquad(homeKeyPlayers);
-    const awaySquad = makeSquad(awayKeyPlayers);
+    const homeSquad = makeSquad(homeKeyPlayers.sort(function(a,b){
+        return b['spPosition'] - a['spPosition'];
+    }));
+
+    const awaySquad = makeSquad(awayKeyPlayers.sort(function(a,b){
+        return a['spPosition'] - b['spPosition'];
+    }));
 
     function getPlayerName(myPlayer){ // 이름
         let name = spid.find(player => player.id === myPlayer.spId).name.split(' ')
@@ -104,6 +109,7 @@ function MatchDetail(props) {
                 case 0: //GK
                     gk = {}
                     gk.name = name;
+                    gk.spPosition = spPosition;
                     gk.position = position;
                     gk.assist = assist;
                     gk.block = block;
@@ -121,6 +127,7 @@ function MatchDetail(props) {
                 case 1: // SW
                     sw = {}
                     sw.name = name;
+                    sw.spPosition = spPosition;
                     sw.position = position;
                     sw.assist = assist;
                     sw.block = block;
@@ -136,132 +143,132 @@ function MatchDetail(props) {
                     sw.imageSrc = imageSrc;
                     break;
                 case 2: // RWB
-                    player = {name, position, assist, block, dribble, ismom, imageSrc,
+                    player = {name, position, assist, block, dribble, ismom, imageSrc, spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wbdm.push(player);
                     break;
                 case 3: // RB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     df.push(player);
                     break;
                 case 4: // RCB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     df.push(player);
                     break;
                 case 5: // CB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     df.push(player);
                     break;
                 case 6: // LCB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     df.push(player);
                     break;
                 case 7: // LB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     df.push(player);
                     break;
                 case 8: // LWB
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wbdm.push(player);
                     break;
                 case 9: // RDM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wbdm.push(player);
                     break;
                 case 10: // CDM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wbdm.push(player);
                     break;
                 case 11: // LDM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wbdm.push(player);
                     break;
                 case 12: // RM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cm.push(player);
                     break;
                 case 13: // RCM
-                    player = {name, position, assist, block, dribble,ismom, imageSrc,
+                    player = {name, position, assist, block, dribble,ismom, imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cm.push(player);
                     break;
                 case 14: // CM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cm.push(player);
                     break;
                 case 15: // LCM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cm.push(player);
                     break;
                 case 16: // LM
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cm.push(player);
                     break;
                 case 17: // RAM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cam.push(player);
                     break;
                 case 18: // CAM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cam.push(player);
                     break;
                 case 19: // LAM
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     cam.push(player);
                     break;
                 case 20: // RF
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wf.push(player);
                     break;
                 case 21: // CF
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wf.push(player);
                     break;
                 case 22: // LF
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wf.push(player);
                     break;
                 case 23: // RW
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wf.push(player);
                     break;
                 case 24: // RS
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     fw.push(player);
                     break;
                 case 25: // ST
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     fw.push(player);
                     break;
                 case 26: // LS
-                    player = {name,  position, assist, block, dribble, ismom,imageSrc,
+                    player = {name,  position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     fw.push(player);
                     break;
                 case 27: // LW
-                    player = {name, position, assist, block, dribble, ismom,imageSrc,
+                    player = {name, position, assist, block, dribble, ismom,imageSrc,spPosition,
                         effectiveShoot, goal, passSuccess, passTry, shoot, spRating, tackle};
                     wf.push(player);
                     break;
@@ -269,6 +276,13 @@ function MatchDetail(props) {
                     break;
             }
         }
+        // student.sort(function(a, b) { // 오름차순
+        //     return a[sortingField] - b[sortingField];
+        //     // 13, 21, 25, 44
+        // });
+
+        // var sortingField = "spPosition"
+
         return {gk, sw, df, wbdm, cm, cam, wf, fw}
     }
 
@@ -291,7 +305,7 @@ function MatchDetail(props) {
         <div>
             <SoccerLineUp
                 size={ "big" }
-                color={ "#33620E" }
+                color={ "#8cc908" }
                 pattern={ "squares" }
                 homeTeam={ buildHomeTeam(homeTeam) || undefined }
                 awayTeam={ buildAwayTeam(awayTeam) || undefined }

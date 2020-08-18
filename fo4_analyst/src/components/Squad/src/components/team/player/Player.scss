@@ -1,23 +1,23 @@
-.player-view {
+.player-view { // 여기서 위치 조정..
 
-    height: 20%;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .player {
-
-        position: relative;
-        border-radius: 50%;
-        padding-top: 45px;
-        width: 45px;
-
-        .number {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
+    //.player {
+    //
+    //    position: relative;
+    //    border-radius:50%;
+    //    padding-top: 45px;
+    //    width: 45px;
+    //
+    //    //.number {
+    //    //    position: absolute;
+    //    //    left: 50%;
+    //    //    top: 50%;
+    //    //    transform: translate(-50%, -50%);
+    //    //}
+    //}
 }

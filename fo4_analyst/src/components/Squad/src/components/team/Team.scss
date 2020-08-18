@@ -6,9 +6,9 @@
 
     .player {
 
-        background-color: #EB5B14;
+        background-color: #EB5B14; //  avatar background color
 
-        .number {
+        .number { // back number color
             color: #ffffff;
         }
     }
@@ -28,13 +28,154 @@
         .lines {
             float: left;
             flex-direction: row-reverse;
+
+            .line{
+
+                .rb {
+                position: absolute;
+                top: 15%;
+            }
+
+            .rcb {
+                position: absolute;
+                top: 35%;
+            }
+            .cb {
+                position: absolute;
+                top: 47.5%;
+            }
+            .lcb {
+                position: absolute;
+                top: 60%;
+            }
+            .lb {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+            .rwb {
+                position: absolute;
+                top: 15%;
+            }
+            .rdm {
+                position: absolute;
+                top: 35%;
+            }
+            .cdm {
+                position: absolute;
+                top: 47.5%;
+            }
+            .ldm {
+                position: absolute;
+                top: 60%;
+            }
+            .lwb {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+
+            .rm {
+                position: absolute;
+                top: 15%;
+            }
+            .rcm {
+                position: absolute;
+                top: 35%;
+            }
+            .cm {
+                position: absolute;
+                top: 47.5%;
+            }
+            .lcm {
+                position: absolute;
+                top: 60%;
+            }
+            .lm {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+
+            .ram {
+                position: absolute;
+                top: 35%;
+            }
+            .cam {
+                position: absolute;
+                top: 47.5%;
+            }
+            .lam {
+                position: absolute;
+                top: 60%;
+            }
+
+
+
+
+
+
+
+            .rw {
+                position: absolute;
+                top: 15%;
+            }
+            .rf {
+                position: absolute;
+                top: 35%;
+            }
+            .cf {
+                position: absolute;
+                top: 47.5%;
+            }
+            .lf {
+                position: absolute;
+                top: 60%;
+            }
+            .lw {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+            .rs {
+                position: absolute;
+                top: 35%;
+            }
+            .st {
+                position: absolute;
+                top: 47.5%;
+            }
+            .ls {
+                position: absolute;
+                top: 60%;
+            }
+
+            }
         }
+
+
 
         .player {
 
             background-color: #008BE0;
 
-            .number {
+            .number { //back number
                 color: #333333;
             }
         }
@@ -64,9 +205,145 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            //justify-content: space-evenly; // space evenly를 빼고 top을 지정?
             align-items: center;
 
+
+
+            .lb {
+                position: absolute;
+                top: 15%;
+            }
+
+            .lcb {
+                position: absolute;
+                top: 35%;
+            }
+            .cb {
+                position: absolute;
+                top: 47.5%;
+            }
+            .rcb {
+                position: absolute;
+                top: 60%;
+            }
+            .rb {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+            .lwb {
+                position: absolute;
+                top: 15%;
+            }
+            .ldm {
+                position: absolute;
+                top: 35%;
+            }
+            .cdm {
+                position: absolute;
+                top: 47.5%;
+            }
+            .rdm {
+                position: absolute;
+                top: 60%;
+            }
+            .rwb {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+
+            .lm {
+                position: absolute;
+                top: 15%;
+            }
+            .lcm {
+                position: absolute;
+                top: 35%;
+            }
+            .cm {
+                position: absolute;
+                top: 47.5%;
+            }
+            .rcm {
+                position: absolute;
+                top: 60%;
+            }
+            .rm {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+
+            .lam {
+                position: absolute;
+                top: 35%;
+            }
+            .cam {
+                position: absolute;
+                top: 47.5%;
+            }
+            .ram {
+                position: absolute;
+                top: 60%;
+            }
+
+
+
+
+
+
+
+            .lw {
+                position: absolute;
+                top: 15%;
+            }
+            .lf {
+                position: absolute;
+                top: 35%;
+            }
+            .cf {
+                position: absolute;
+                top: 47.5%;
+            }
+            .rf {
+                position: absolute;
+                top: 60%;
+            }
+            .rw {
+                position: absolute;
+                top: 80%;
+            }
+
+
+
+
+
+            .ls {
+                position: absolute;
+                top: 35%;
+            }
+            .st {
+                position: absolute;
+                top: 47.5%;
+            }
+            .rs {
+                position: absolute;
+                top: 60%;
+            }
         }
     }
 
