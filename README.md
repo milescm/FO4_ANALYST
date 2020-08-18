@@ -1,2 +1,2 @@
-# BottomUp
-충남대학교 SW중심대학사업단에서 주관하는 Bottom Up 프로젝트 경진대회
+# FIFA ONLINE 4 ANALYST
+넥슨 피파온라인 4 통계 분석 사이트
