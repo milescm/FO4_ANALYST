@@ -21,7 +21,8 @@ export type Player = {
     shoot?: number,
     spRating?: number,
     tackle?: number,
-    ismom?: number
+    ismom?: number,
+    imageSrc?: string
 }
 
 interface PlayerViewProps {
@@ -47,7 +48,8 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
         shoot: PropTypes.number,
         spRating: PropTypes.number,
         tackle: PropTypes.number,
-        ismom: PropTypes.number
+        ismom: PropTypes.number,
+        imageSrc: PropTypes.string
     })
 
     render() {
@@ -60,7 +62,7 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
                 <div>
                     { player.ismom == 1 && <ThunderboltFilled style ={{color: 'yellow'}}/>}
                     <Badge >
-                        <Avatar  className ="player">
+                        <Avatar src= {player.imageSrc} className ="player">
                             {/*style={{ color: '#ffffff', backgroundColor: '#EB5B14'}*/}
                             {player.spRating}
                         </Avatar>

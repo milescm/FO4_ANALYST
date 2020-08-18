@@ -8,10 +8,11 @@ import MatchDetail from './matchDetail'
 
 function MatchTable(props) {
 
+
     let matchResult
 
     if (props.matchData){
-        matchResult = props.matchData.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname}, {away: match.matchInfo[1].nickname}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
+        matchResult = props.matchData.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname.toLowerCase()}, {away: match.matchInfo[1].nickname.toLowerCase()}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
     }
 
 
@@ -47,7 +48,7 @@ function MatchTable(props) {
             return 'table-row-win'
         }else if(match.homeGoalTotal === match.awayGoalTotal){
             return 'table-row-draw'
-        }else {
+        }else{
             return 'table-row-lose'
         }
     }
@@ -64,21 +65,21 @@ function MatchTable(props) {
 
         render: (text, record, index) => <MatchResult matchResult= {matchResult[PageSize * (PageNum-1) + index]} />
     },]
-            // <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', height: '90vh'}}>
+    // <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', height: '90vh'}}>
 
 
     return (
 
         <div >
             <Table style ={{position: 'relative', left: '50%', transform: 'translateX(-50%)', width: '75%'}}
-                dataSource={matchResult}
-                columns={columns}
-                expandable={{
-                    expandedRowRender: (record, index) => <MatchDetail matchInfo = {props.matchData[PageSize * (PageNum-1) + index].matchInfo}/>,
-                }}
-                bordered
-                pagination={paginationProps}
-                rowClassName={(record, index) => highlightResult(index)}
+                   dataSource={matchResult}
+                   columns={columns}
+                   expandable={{
+                       expandedRowRender: (record, index) => <MatchDetail matchInfo = {props.matchData[PageSize * (PageNum-1) + index].matchInfo}/>,
+                   }}
+                   bordered
+                   pagination={paginationProps}
+                   rowClassName={(record, index) => highlightResult(index)}
             />;
         </div>
     );

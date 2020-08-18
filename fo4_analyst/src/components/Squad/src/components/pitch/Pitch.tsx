@@ -40,7 +40,7 @@ class Pitch extends Component<PitchProps, PitchState> {
 
     render() {
 
-        console.log(this.props)
+        // console.log(this.props)
 
         const { color, size, pattern, homeTeam, awayTeam } = this.props;
 
