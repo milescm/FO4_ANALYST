@@ -7,14 +7,11 @@ import MatchDetail from './matchDetail'
 
 
 function MatchTable(props) {
-
-
     let matchResult
 
     if (props.matchData){
         matchResult = props.matchData.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname.toLowerCase()}, {away: match.matchInfo[1].nickname.toLowerCase()}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
     }
-
 
     const [PageSize, setPageSize] = useState(20)
     const [PageNum, setPageNum] = useState(1)
@@ -59,8 +56,8 @@ function MatchTable(props) {
         key: 'matchDate',
         width: '15%',
     },{
-        title: '',
-        dataIndex: '',
+        title: '경기 결과',
+        dataIndex: 'matchResult',
         key: 'x',
 
         render: (text, record, index) => <MatchResult matchResult= {matchResult[PageSize * (PageNum-1) + index]} />

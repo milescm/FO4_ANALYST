@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import PropTypes from "prop-types";
-import { Avatar, Badge  } from 'antd';
+import { Avatar, Typography  } from 'antd';
 import "./Player.scss";
 import {StarTwoTone, ThunderboltFilled} from "@ant-design/icons/lib";
-import {useState} from "react";
-import { Modal, Button } from 'antd';
+import { Badge } from 'reactstrap';
+
+import { Modal, Card} from 'antd';
 
 
 
@@ -23,18 +24,43 @@ export type Player = {
     tackle?: number,
     ismom?: number,
     imageSrc?: string,
-    spPosition?: number
+    spPosition?: number,
+    color?: string;
 }
+
 
 interface PlayerViewProps {
     player: Player;
 }
 
 interface PlayerViewState {
-
+    visible: boolean
 }
 
 class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
+
+    state: PlayerViewState = {
+        visible:false
+    };
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    handleOk = () => {
+        this.setState(
+            ({visible}) => ({visible: false})
+        );
+    };
+
+    handleCancel = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+
 
     static playerShape = PropTypes.shape({
         name: PropTypes.string,
@@ -51,34 +77,72 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
         tackle: PropTypes.number,
         ismom: PropTypes.number,
         imageSrc: PropTypes.string,
-        spPosition: PropTypes.number
+        spPosition: PropTypes.number,
+        color: PropTypes.string
     })
 
     render() {
         const { player } = this.props;
-        //여기서...................................각 선수 포지션 별로 속성 먹이면서 배치.
+        console.log(player)
+        const { Text, Link } = Typography;
+        const {showModal,handleOk, handleCancel} = this;
+
         return (
             <div>
                 <div className="player-view">
-                    {/*<Avatar size ='large' style={{ backgroundColor: '#ffffff' }}/>*/}
-                    <div>
+                    <div style ={{cursor: 'pointer'}} onClick = {showModal}>
                         { player.ismom == 1 && <ThunderboltFilled style ={{color: 'yellow'}}/>}
-                        <Badge >
-                            <Avatar src= {player.imageSrc} className ="player">
-                                {/*style={{ color: '#ffffff', backgroundColor: '#EB5B14'}*/}
-                                {player.spRating}
-                            </Avatar>
-                            <div style={{fontSize: '2px', textAlign: "center", width: "auto", fontWeight: "bold", color: "black"}}>{player.name}</div>
-                        </Badge>
-                        {/*<div className="player">*/}
-                            {/*    <div className="number">{ player.number }</div>*/}
-                            {/*<div style={{fontSize: '11px', textAlign: "center", width: "auto", fontWeight: "bold", color: "black"}}>{player.name}</div>*/}
-                        {/*</div>*/}
+                        <Avatar  size= {45} src= {player.imageSrc} className ="player">{/*style={{ color: '#ffffff', backgroundColor: '#EB5B14'}*/}
+                            {player.spRating}
+                        </Avatar>
                     </div>
                 </div>
+                <div style={{fontSize: '11px', textAlign: "center", width: "auto", color: "white"}}> <Badge color={player.color}>{player.position}</Badge> {player.name}</div>
+
+
+
+
+
+                <Modal
+                    title="Player Stat"
+                    visible={this.state.visible}
+                    onOk={handleOk}
+                    onCancel={handleCancel}
+                >
+
+                    <Card hoverable cover={<img style={{ width: 120 }} alt={player.name} src={player.imageSrc} />}>
+                        <p>평점: {player.spRating}</p>
+                        <p>슈팅 시도: {player.shoot}</p>
+                        <p>유효 슈팅: {player.effectiveShoot}</p>
+                        <p>골: {player.goal}</p>
+                        <p>패스 시도: {player.passTry}</p>
+                        <p>패스 성공: {player.passSuccess}</p>
+                        <p>어시스트: {player.assist}</p>
+                        <p>태클 시도: {player.tackle}</p>
+                        <p>차단: {player.block}</p>
+                    </Card>
+
+                </Modal>
             </div>
+
         );
     }
 }
 
 export default PlayerView;
+
+
+
+
+
+
+
+
+
+
+
+
+{/*<div className="player">*/}
+{/*    <div className="number">{ player.number }</div>*/}
+{/*<div style={{fontSize: '11px', textAlign: "center", width: "auto", fontWeight: "bold", color: "black"}}>{player.name}</div>*/}
+{/*</div>*/}

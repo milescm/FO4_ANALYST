@@ -83,9 +83,9 @@ class Pitch extends Component<PitchProps, PitchState> {
         return (
             <div className="teams">
 
-                { homeTeam && <TeamView team={ homeTeam } /> }
+                { homeTeam && <TeamView team={ homeTeam }/> }
 
-                { awayTeam && <TeamView away team={ awayTeam } /> }
+                { awayTeam && <TeamView away team={ awayTeam }/> }
 
             </div>
         );

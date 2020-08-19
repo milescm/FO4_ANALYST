@@ -31,14 +31,16 @@
 
             .line{
 
-                .rb {
+
+
+            .rb {
                 position: absolute;
-                top: 15%;
+                top: 13%;
             }
 
             .rcb {
                 position: absolute;
-                top: 35%;
+                top: 33%;
             }
             .cb {
                 position: absolute;
@@ -46,11 +48,11 @@
             }
             .lcb {
                 position: absolute;
-                top: 60%;
+                top: 57%;
             }
             .lb {
                 position: absolute;
-                top: 80%;
+                top: 79%;
             }
 
 
@@ -111,7 +113,7 @@
 
             .ram {
                 position: absolute;
-                top: 35%;
+                top: 30%;
             }
             .cam {
                 position: absolute;
@@ -119,7 +121,7 @@
             }
             .lam {
                 position: absolute;
-                top: 60%;
+                top: 65%;
             }
 
 
@@ -134,7 +136,7 @@
             }
             .rf {
                 position: absolute;
-                top: 35%;
+                top: 30%;
             }
             .cf {
                 position: absolute;
@@ -142,7 +144,7 @@
             }
             .lf {
                 position: absolute;
-                top: 60%;
+                top: 65%;
             }
             .lw {
                 position: absolute;
@@ -195,7 +197,7 @@
     .lines {
 
         height: 100%;
-        width: 75%;
+        width: 80%;
         float: right;
         display: flex;
 
@@ -208,16 +210,20 @@
             //justify-content: space-evenly; // space evenly를 빼고 top을 지정?
             align-items: center;
 
+            .sw {
+                position: absolute;
+                top: 45.5%;
+            }
 
 
             .lb {
                 position: absolute;
-                top: 15%;
+                top: 13%;
             }
 
             .lcb {
                 position: absolute;
-                top: 35%;
+                top: 33%;
             }
             .cb {
                 position: absolute;
@@ -225,11 +231,11 @@
             }
             .rcb {
                 position: absolute;
-                top: 60%;
+                top: 57%;
             }
             .rb {
                 position: absolute;
-                top: 80%;
+                top: 79%;
             }
 
 
@@ -290,7 +296,7 @@
 
             .lam {
                 position: absolute;
-                top: 35%;
+                top: 30%;
             }
             .cam {
                 position: absolute;
@@ -298,7 +304,7 @@
             }
             .ram {
                 position: absolute;
-                top: 60%;
+                top: 65%;
             }
 
 
@@ -313,7 +319,7 @@
             }
             .lf {
                 position: absolute;
-                top: 35%;
+                top: 30%;
             }
             .cf {
                 position: absolute;
@@ -321,7 +327,7 @@
             }
             .rf {
                 position: absolute;
-                top: 60%;
+                top: 65%;
             }
             .rw {
                 position: absolute;
