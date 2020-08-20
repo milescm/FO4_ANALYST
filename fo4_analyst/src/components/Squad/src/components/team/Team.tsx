@@ -120,6 +120,8 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             {/*{ wbdm.map((wbdm, i) => <PlayerView player={ wbdm } key={ i } />) }*/}
 
                         </div> }
+                        <div className = "line"/>
+
 
                         <div className = "line"/>
 
@@ -136,8 +138,11 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             {/*{ cm.map((cm, i) => <PlayerView player={ cm } key={ i } />) }*/}
 
                         </div> }
+                        <div className = "line"/>
+                        <div className = "line"/>
 
                         { cam && <div className="line">
+
                             { cam.map((cam, i) =>
                                 cam.spPosition === 19 ? <div key = {i} className = "lam"><PlayerView player={ cam } key={ cam.spPosition } /></div> :
                                     cam.spPosition === 18 ? <div key = {i} className = "cam"><PlayerView player={ cam } key={ cam.spPosition } /></div> :
@@ -145,6 +150,7 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             )}
 
                         </div> }
+                        <div className = "line"/>
 
 
                         { wf && <div className="line">
@@ -156,6 +162,9 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                                                 wf.spPosition === 23 ? <div key = {i} className = "rw"><PlayerView player={ wf } key={ wf.spPosition } /></div> : null
                             )}
                         </div> }
+
+
+                        <div className = "line"/>
 
                         { fw && <div className="line">
                             { fw.map((fw, i) =>

@@ -40,7 +40,11 @@ function MatchTable(props) {
         //const allMatches = props.matchData.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname}, {away: match.matchInfo[1].nickname}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
 
         const match = matchResult[matchIndex]
-        const userTeam = Object.keys(match).find(key => match[key] === props.nickname)
+        console.log(match)
+        console.log(props.nickname)
+        const userTeam = Object.keys(match).find(key => match[key] === props.nickname.toLowerCase())
+
+        console.log(userTeam)
         if ( (userTeam === "home" && match.homeGoalTotal > match.awayGoalTotal) || userTeam === "away" && match.homeGoalTotal < match.awayGoalTotal ){
             return 'table-row-win'
         }else if(match.homeGoalTotal === match.awayGoalTotal){

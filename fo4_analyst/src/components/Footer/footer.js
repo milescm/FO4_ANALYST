@@ -10,7 +10,7 @@ function MyFooter(props) {
         <div>
             <Layout>
                 <Footer style = {{width: '100%', position: 'absolute', bottom: 0, backgroundColor:'white', display:'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold'}}>
-                    Data based on Nexon Developers
+                    Data based on NEXON DEVELOPERS
                 </Footer>
             </Layout>
         </div>

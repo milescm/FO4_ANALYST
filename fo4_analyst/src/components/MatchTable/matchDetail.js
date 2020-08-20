@@ -313,10 +313,10 @@ function MatchDetail(props) {
     }
 
     return (
-        <div>
+        <div style ={{display:'flex', justifyContent: 'center', alignItems: 'center' }}>
             <SoccerLineUp
                 size={ "big" }
-                color={ "#376711" }
+                color={ "#33620E" }
                 pattern={ "lines" }
                 homeTeam={ buildHomeTeam(homeTeam) || undefined }
                 awayTeam={ buildAwayTeam(awayTeam) || undefined }
