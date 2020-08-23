@@ -13,16 +13,21 @@ function MatchTable(props) {
     // const [matchResult, setMatchResult] = useState(null)
 
 
+    console.log(props.matchData)
     let matchResult;
+    let matchData;
+
 
     if (props.matchData){
         matchResult = props.matchData.filter(function(match){
-            return match.matchInfo.length === 2;
+            return (match.matchInfo.length === 2);
         }).map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname.toLowerCase()}, {away: match.matchInfo[1].nickname.toLowerCase()}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
-        // matchResult = props.matchData.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname.toLowerCase()}, {away: match.matchInfo[1].nickname.toLowerCase()}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
-    }
 
-    // console.log(matchResult);
+        matchData = props.matchData.filter(function(match){
+            return (match.matchInfo.length === 2);
+        }).map((match, index) => Object.assign({}, {key:index}, {matchInfo: match.matchInfo}))
+
+    }
 
     const [PageSize, setPageSize] = useState(20)
     const [PageNum, setPageNum] = useState(1)
@@ -82,20 +87,6 @@ function MatchTable(props) {
         render: (text, record, index) => <MatchResult matchResult= {matchResult[PageSize * (PageNum-1) + index]} />
 
     },]
-    // <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', height: '90vh'}}>
-
-    //   <Tabs defaultActiveKey="1" onChange={callback}>
-    //   <TabPane tab="Tab 1" key="1">
-    //     Content of Tab Pane 1
-    //   </TabPane>
-    //   <TabPane tab="Tab 2" key="2">
-    //     Content of Tab Pane 2
-    //   </TabPane>
-    //   <TabPane tab="Tab 3" key="3">
-    //     Content of Tab Pane 3
-    //   </TabPane>
-    // </Tabs>
-
 
     return (
 
@@ -108,7 +99,7 @@ function MatchTable(props) {
                        expandedRowRender: (record, index) =>
                            <Tabs defaultActiveKey="1">
                                <TabPane style ={{height: '900px', width: '1250px'}} tab="Summary" key="1">
-                                   <MatchDetail matchInfo = {props.matchData[PageSize * (PageNum-1) + index].matchInfo}/>
+                                   <MatchDetail matchInfo = {matchData[PageSize * (PageNum-1) + index].matchInfo}/>
                                </TabPane>
                                <TabPane tab="Player Statistics" key="2">
                                    준비 중

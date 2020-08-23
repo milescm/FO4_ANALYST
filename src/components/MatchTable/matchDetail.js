@@ -13,7 +13,7 @@ import image1 from '../../images/309478-P83VSI-858.jpg';
 
 function MatchDetail(props) {
 
-    // console.log(props.matchInfo)
+    console.log(props.matchInfo)
 
     const homeTeam = props.matchInfo[0].player;
     const awayTeam = props.matchInfo[1].player;
