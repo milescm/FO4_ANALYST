@@ -143,6 +143,8 @@ function GameRecordPage(props) {
                 return "슈퍼 챔피언스";
             case 900:
                 return "챔피언스";
+            default:
+                break;
         }
     }
 
