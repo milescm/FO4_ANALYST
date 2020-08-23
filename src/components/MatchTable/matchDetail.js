@@ -13,8 +13,6 @@ import image1 from '../../images/309478-P83VSI-858.jpg';
 
 function MatchDetail(props) {
 
-    console.log(props.matchInfo)
-
     const homeTeam = props.matchInfo[0].player;
     const awayTeam = props.matchInfo[1].player;
 
@@ -53,7 +51,7 @@ function MatchDetail(props) {
     }));
 
     function getPlayerName(myPlayer){ // 이름
-        let name = spid.find(player => player.id === myPlayer.spId).name.split(' ')
+        let name = spid.find(player => player.id.toString().substring(3, 9) === myPlayer.spId.toString().substring(3, 9)).name.split(' ')
         return name[name.length-1]
     }
 

@@ -13,7 +13,6 @@ function MatchTable(props) {
     // const [matchResult, setMatchResult] = useState(null)
 
 
-    console.log(props.matchData)
     let matchResult;
     let matchData;
 
