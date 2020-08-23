@@ -23,17 +23,17 @@ function Manager(props) { //  매니저(감독) 기본 정보 : 닉네임, 레�
                 </Card>
 
                 <Card body inverse style={{backgroundColor: '#333', borderColor: '#7EC508' }}>
-                    <CardTitle><b><span style = {{color: '#7EC508'}}>50경기 평균 점유율 </span></b></CardTitle>
+                    <CardTitle><b><span style = {{color: '#7EC508'}}>최대 50경기 평균 점유율 </span></b></CardTitle>
                     <h2 style ={{color: 'white'}}><CardText>{props.averagePossession}%</CardText></h2>
                 </Card>
 
                 <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
-                    <CardTitle><b><span style = {{color: '#7EC508'}}>50경기 평균 헤더 비율 </span></b></CardTitle>
+                    <CardTitle><b><span style = {{color: '#7EC508'}}>최대 50경기 평균 헤더 비율 </span></b></CardTitle>
                     <h2 style ={{color: 'white'}}><CardText>{props.averageHeader}%</CardText></h2>
                 </Card>
 
                 <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
-                    <CardTitle><b><span style = {{color: '#7EC508'}}>50경기 평균 중거리 슛 비율 </span></b></CardTitle>
+                    <CardTitle><b><span style = {{color: '#7EC508'}}>최대 50경기 평균 중거리 슛 비율 </span></b></CardTitle>
                     <h2 style ={{color: 'white'}}><CardText>{props.averageLongShot}%</CardText></h2>
                 </Card>
 
