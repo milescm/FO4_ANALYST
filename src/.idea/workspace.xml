@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ae92f3-e48c-417e-ae1e-4c9746f3a249" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MatchTable/matchDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MatchTable/matchDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MatchTable/matchTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MatchTable/matchTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Squad/src/components/team/player/Player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Squad/src/components/team/player/Player.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/views/LandingPage/LandingPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/components/MatchTable/matchTable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -34,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/components/Squad/src/components/team/player/Player.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
-              <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
+              <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -46,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/components/Header/header.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -57,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/MatchTable/matchDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -75,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1886">
-              <caret line="172" selection-start-line="172" selection-end-line="172" />
+            <state relative-caret-position="233">
+              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -87,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/views/LandingPage/LandingPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+            <state relative-caret-position="138">
+              <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -100,6 +95,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>console.log</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -110,10 +110,10 @@
         <option value="$PROJECT_DIR$/components/MatchTable/matchTable.js" />
         <option value="$PROJECT_DIR$/components/Squad/src/components/team/player/Player.tsx" />
         <option value="$PROJECT_DIR$/components/Header/header.js" />
-        <option value="$PROJECT_DIR$/components/MatchTable/matchDetail.js" />
         <option value="$PROJECT_DIR$/App.js" />
-        <option value="$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js" />
         <option value="$PROJECT_DIR$/components/views/LandingPage/LandingPage.js" />
+        <option value="$PROJECT_DIR$/components/MatchTable/matchDetail.js" />
+        <option value="$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js" />
       </list>
     </option>
   </component>
@@ -127,8 +127,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="107" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -230,6 +230,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -259,26 +260,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598181988174</updated>
-      <workItem from="1598181999373" duration="485000" />
+      <workItem from="1598181999373" duration="869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485000" />
+    <option name="totallyTimeSpent" value="869000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.515906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.51541555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3295129" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32577905" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -301,7 +302,7 @@
     <entry file="file://$PROJECT_DIR$/components/MatchTable/matchTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -311,7 +312,7 @@
     <entry file="file://$PROJECT_DIR$/components/Squad/src/components/team/player/Player.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
-          <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
+          <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
@@ -321,17 +322,7 @@
     <entry file="file://$PROJECT_DIR$/components/Header/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/MatchTable/matchDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -345,22 +336,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js">
+    <entry file="file://$PROJECT_DIR$/components/views/LandingPage/LandingPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1886">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
+        <state relative-caret-position="138">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/views/LandingPage/LandingPage.js">
+    <entry file="file://$PROJECT_DIR$/components/MatchTable/matchDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/views/GameRecordPage/GameRecordPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

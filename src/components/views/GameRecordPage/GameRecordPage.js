@@ -62,7 +62,7 @@ function GameRecordPage(props) {
         setAverageLongShot((shootOutPenalty/shootTotal*100).toFixed(2));
     };
         getUserData()// 컴포넌트가 마운트 되고 getData함수를실행합니다.
-    }, []); //<--- 두번째 인자로 빈 배열 넣어주기 ==> 첫 실행시에만 getData() 실행함
+    }, [nickname]); //<--- 두번째 인자로 빈 배열 넣어주기 ==> 첫 실행시에만 getData() 실행함
 
 
 
