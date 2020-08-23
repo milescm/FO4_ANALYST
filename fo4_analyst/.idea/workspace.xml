@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f56b6c27-58d8-44da-853e-a036aeee57d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Manager/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Manager/manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchTable/matchDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchTable/matchDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchTable/matchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchTable/matchResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchTable/matchTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchTable/matchTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Squad/src/components/team/Team.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Squad/src/components/team/Team.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Squad/src/components/team/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Squad/src/components/team/Team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Squad/src/components/team/player/Player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Squad/src/components/team/player/Player.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/GameRecordPage/GameRecordPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/GameRecordPage/GameRecordPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/LandingPage/LandingPage.js" afterDir="false" />
-    </list>
+    <list default="true" id="f56b6c27-58d8-44da-853e-a036aeee57d3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/MatchTable/matchDetail.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
+              <caret line="321" selection-start-line="321" selection-end-line="321" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -53,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/views/LandingPage/LandingPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -65,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="212">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -94,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Footer/footer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -218,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
@@ -381,18 +366,17 @@
       <workItem from="1597906343906" duration="7633000" />
       <workItem from="1598065717295" duration="30815000" />
       <workItem from="1598151075413" duration="1962000" />
-      <workItem from="1598168571685" duration="3979000" />
+      <workItem from="1598168571685" duration="4233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226773000" />
+    <option name="totallyTimeSpent" value="227027000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,7 +390,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.32577905" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49865952" visible="true" weight="0.25212464" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49865952" visible="true" weight="0.25212464" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295129" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -693,7 +677,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -706,7 +690,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Footer/footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -726,7 +710,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/MatchTable/matchDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
+          <caret line="321" selection-start-line="321" selection-end-line="321" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -746,7 +730,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/views/LandingPage/LandingPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
