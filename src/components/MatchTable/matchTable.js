@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import 'antd/dist/antd.css';
 import { Table } from 'antd';
 import './matchTable.css';
@@ -56,7 +56,7 @@ function MatchTable(props) {
         const userTeam = Object.keys(match).find(key => match[key] === props.nickname.toLowerCase())
 
         // console.log(userTeam)
-        if ( (userTeam === "home" && match.homeGoalTotal > match.awayGoalTotal) || userTeam === "away" && match.homeGoalTotal < match.awayGoalTotal ){
+        if ( (userTeam === "home" && match.homeGoalTotal > match.awayGoalTotal) || (userTeam === "away" && match.homeGoalTotal < match.awayGoalTotal) ){
             return 'table-row-win'
         }else if(match.homeGoalTotal === match.awayGoalTotal){
             return 'table-row-draw'

@@ -1,8 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Avatar, Typography  } from 'antd';
+import { Avatar  } from 'antd';
 import "./Player.scss";
-import {StarTwoTone, ThunderboltFilled} from "@ant-design/icons/lib";
+import { ThunderboltFilled} from "@ant-design/icons/lib";
 import { Badge } from 'reactstrap';
 import {Badge as Badge2} from 'antd';
 
@@ -93,7 +93,7 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
             <div>
                 {/*<span><Badge>{ player.ismom == 1 && <ThunderboltFilled style ={{color: 'yellow'}}/>}</Badge></span>*/}
                 <div className="player-view">
-                    <div>{ player.ismom == 1 && <ThunderboltFilled style ={{color: 'yellow'}}/>}</div>
+                    <div>{ player.ismom === 1 && <ThunderboltFilled style ={{color: 'yellow'}}/>}</div>
                     <div style ={{cursor: 'pointer'}} onClick = {showModal}>
                         <Badge2 count = {player.spRating} style={{ backgroundColor: '#6B747B', color: '#ffffff' }}>
                             <Avatar  size= {45} src= {player.imageSrc} className ="player"/>{/*style={{ color: '#ffffff', backgroundColor: '#EB5B14'}*/}
@@ -135,19 +135,3 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
 }
 
 export default PlayerView;
-
-
-
-
-
-
-
-
-
-
-
-
-{/*<div className="player">*/}
-{/*    <div className="number">{ player.number }</div>*/}
-{/*<div style={{fontSize: '11px', textAlign: "center", width: "auto", fontWeight: "bold", color: "black"}}>{player.name}</div>*/}
-{/*</div>*/}

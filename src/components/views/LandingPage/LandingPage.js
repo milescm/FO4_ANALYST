@@ -6,10 +6,8 @@ import Footer from '../../Footer/footer'
 import Header from '../../Header/header'
 
 import image1 from '../../../images/309478-P83VSI-858.jpg';
-import image2 from '../../../images/audience-1866738_1920.jpg'
-import image3 from '../../../images/istockphoto-1168591951-170667a.jpg';
-import image4 from '../../../images/soccer-768482_1920.jpg';
-import { message, Button } from 'antd';
+
+import { message } from 'antd';
 
 import { Input } from 'antd';
 const { Search } = Input;
@@ -69,9 +67,6 @@ function LandingPage(props) {
             }
         }
     }
-    {/*<div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>*/}
-    // style={{ backgroundImage:`url(${InnerBgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain'}}
-    {/*<div style={{display:'flex', justifyContent: 'center', alignItems: 'center', height: '83vh', position: 'relative'}}>*/}
 
     return (
         <div style = {{position: 'relative', backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>

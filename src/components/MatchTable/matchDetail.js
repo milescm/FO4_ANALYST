@@ -3,11 +3,11 @@ import SoccerLineUp from '../Squad/src';
 import spid from '../../datas/spid';
 import spposition from '../../datas/spposition';
 
-import {Card, CardTitle, CardText, CardGroup, CardDeck} from 'reactstrap';
+import {Card, CardTitle, CardText, CardDeck} from 'reactstrap';
 import image1 from '../../images/309478-P83VSI-858.jpg';
-import image2 from '../../images/audience-1866738_1920.jpg'
-import image3 from '../../images/istockphoto-1168591951-170667a.jpg';
-import image4 from '../../images/soccer-768482_1920.jpg';
+// import image2 from '../../images/audience-1866738_1920.jpg'
+// import image3 from '../../images/istockphoto-1168591951-170667a.jpg';
+// import image4 from '../../images/soccer-768482_1920.jpg';
 
 
 
@@ -18,18 +18,13 @@ function MatchDetail(props) {
     const homeTeam = props.matchInfo[0].player;
     const awayTeam = props.matchInfo[1].player;
 
-    // console.log(homeTeam)
 
     const homeKeyPlayers = homeTeam.filter(function(player){
         return player.spPosition !== 28
     })
 
-    {/*평균 평점, 총 슈팅 수, 점유율, 패스 성공률, 태클 수, 블락 수*/}
-
     let homeRatings = 0;
     let awayRatings = 0;
-
-    // console.log(homeKeyPlayers)
 
 
     homeKeyPlayers.map((kp) =>

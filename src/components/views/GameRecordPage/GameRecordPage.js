@@ -4,9 +4,8 @@ import Footer from '../../Footer/footer'
 import Manager from '../../Manager/manager'
 import MatchTable from '../../MatchTable/matchTable';
 
-import image from '../../../images/istockphoto-1168591951-170667a.jpg'
+// import image from '../../../images/istockphoto-1168591951-170667a.jpg'
 import image1 from "../../../images/309478-P83VSI-858.jpg";
-import {Tabs} from "antd";
 
 
 function GameRecordPage(props) {
@@ -21,10 +20,7 @@ function GameRecordPage(props) {
     const [AverageLongShot, setAverageLongShot] = useState(0)
 
     useEffect(() => {
-        getUserData()// 컴포넌트가 마운트 되고 getData함수를실행합니다.
-    }, []); //<--- 두번째 인자로 빈 배열 넣어주기 ==> 첫 실행시에만 getData() 실행함
-
-    async function getUserData() {
+        async function getUserData() {
         const userInfo = await getUserInfo(nickname)
         setUserLevel(userInfo.level)
 
@@ -64,36 +60,11 @@ function GameRecordPage(props) {
         setAveragePossession((possession/allMatches.length).toFixed(2));
         setAverageHeader((shootHeading/shootTotal*100).toFixed(2));
         setAverageLongShot((shootOutPenalty/shootTotal*100).toFixed(2));
+    };
+        getUserData()// 컴포넌트가 마운트 되고 getData함수를실행합니다.
+    }, []); //<--- 두번째 인자로 빈 배열 넣어주기 ==> 첫 실행시에만 getData() 실행함
 
-        // console.log(possession)
 
-
-        // for (let i = 0; i < this.state.matchId.length; i++) {  //나중에 배열메소드 써서 리팩토링
-        //     if(allMatch[i]['matchInfo'][0]["accessId"] === this.state.accessId){
-        //         possession += allMatch[i]['matchInfo'][0]['matchDetail']['possession'];
-        //         shootTotal += allMatch[i]['matchInfo'][0]['shoot']['shootTotal'];
-        //         shootHeading += allMatch[i]['matchInfo'][0]['shoot']['shootHeading'];
-        //         shootOutPenalty += allMatch[i]['matchInfo'][0]['shoot']['shootOutPenalty'];
-        //         MatchData.push(allMatch[i]['matchInfo']);
-        //     }
-        //     else {
-        //         possession += allMatch[i]['matchInfo'][1]['matchDetail']['possession'];
-        //         shootTotal += allMatch[i]['matchInfo'][1]['shoot']['shootTotal'];
-        //         shootHeading += allMatch[i]['matchInfo'][1]['shoot']['shootHeading'];
-        //         shootOutPenalty += allMatch[i]['matchInfo'][1]['shoot']['shootOutPenalty'];
-        //         MatchData.push(allMatch[i]['matchInfo']);
-        //     }
-        // }
-        // this.setState({
-        //         averagePossession : possession/this.state.matchId.length,
-        //         headerPortion : shootHeading/shootTotal,
-        //         OutPenaltyPortion : shootOutPenalty/shootTotal,
-        //         MatchData : MatchData
-        //     }
-
-        // console.log("allMatches: ",allMatches)
-
-    }
 
 
     function getUserInfo(nickname){
@@ -175,13 +146,9 @@ function GameRecordPage(props) {
         }
     }
 
-// {{display:'flex', justifyContent:'center', alignItems:'center', height:'100vh', width: '100%'}}
-    {/*<div style ={{height: '100vh', width: '100vw', margin: 0}}>*/}
-
     return (
 
         <div style={{position: 'relative', backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
-            {/*<div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>*/}
             <div>
                <Header style ={{position: 'absolute', top: 0}}/>
             </div>
@@ -203,27 +170,3 @@ function GameRecordPage(props) {
 }
 
 export default GameRecordPage;
-
-
-{/*<div>*/}
-{/*    <div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>*/}
-{/*        <div>*/}
-{/*            <div>*/}
-{/*                <Header/>*/}
-{/*            </div>*/}
-{/*        </div>*/}
-{/*        <div>*/}
-{/*            <div>*/}
-{/*                <Manager nickname = {nickname} level = {UserLevel} tier = {CareerHighTier} averagePossession = {AveragePossession} averageHeader = {AverageHeader} averageLongShot = {AverageLongShot}/>*/}
-{/*            </div>*/}
-{/*            <br/>*/}
-{/*        </div>*/}
-{/*        <div>*/}
-{/*                <MatchTable  nickname = {nickname} matchData = {MatchData}/>*/}
-{/*        </div>*/}
-
-{/*        <div>*/}
-{/*            <Footer/>*/}
-{/*        </div>*/}
-{/*    </div>*/}
-{/*</div>*/}
