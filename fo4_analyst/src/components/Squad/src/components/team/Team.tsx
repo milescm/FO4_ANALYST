@@ -74,7 +74,7 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
 
                 <div className="lines">
 
-                    <div className = "line"/>
+                    {/*<div className = "line"/>*/}
 
                     { sw && <div className="line">
                         <div className = "sw"><PlayerView player={sw} key = {sw.spPosition}/></div></div>}
@@ -105,8 +105,8 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                     {/*        /!*<PlayerView player={df[0]}/>*!/*/}
 
 
-                        <div className = "line"/>
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
+                        {/*<div className = "line"/>*/}
 
                         { wbdm && <div className="line">
                             { wbdm.map((wbdm, i) =>
@@ -120,10 +120,10 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             {/*{ wbdm.map((wbdm, i) => <PlayerView player={ wbdm } key={ i } />) }*/}
 
                         </div> }
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
 
 
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
 
                         {/*{ cm && <div className="line">*/}
 
@@ -138,8 +138,8 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             {/*{ cm.map((cm, i) => <PlayerView player={ cm } key={ i } />) }*/}
 
                         </div> }
-                        <div className = "line"/>
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
+                        {/*<div className = "line"/>*/}
 
                         { cam && <div className="line">
 
@@ -150,7 +150,7 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                             )}
 
                         </div> }
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
 
 
                         { wf && <div className="line">
@@ -164,7 +164,7 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
                         </div> }
 
 
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
 
                         { fw && <div className="line">
                             { fw.map((fw, i) =>
@@ -175,7 +175,7 @@ class TeamView extends Component<TeamViewProps, TeamViewState> {
 
                         </div> }
 
-                        <div className = "line"/>
+                        {/*<div className = "line"/>*/}
 
                 </div>
 

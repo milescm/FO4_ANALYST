@@ -6,6 +6,7 @@ import MatchTable from '../../MatchTable/matchTable';
 
 import image from '../../../images/istockphoto-1168591951-170667a.jpg'
 import image1 from "../../../images/309478-P83VSI-858.jpg";
+import {Tabs} from "antd";
 
 
 function GameRecordPage(props) {
@@ -15,10 +16,12 @@ function GameRecordPage(props) {
     const [UserLevel, setUserLevel] = useState(0)
     const [CareerHighTier, setCareerHighTier] = useState("")
     const [MatchData, setMatchData] =  useState(null)
+    const [AveragePossession, setAveragePossession] = useState(0)
+    const [AverageHeader, setAverageHeader] = useState(0)
+    const [AverageLongShot, setAverageLongShot] = useState(0)
 
     useEffect(() => {
         getUserData()// 컴포넌트가 마운트 되고 getData함수를실행합니다.
-        console.log('useEffect');
     }, []); //<--- 두번째 인자로 빈 배열 넣어주기 ==> 첫 실행시에만 getData() 실행함
 
     async function getUserData() {
@@ -33,7 +36,63 @@ function GameRecordPage(props) {
         const promises = matchID.map(getMatchData);
         const allMatches = await Promise.all(promises);
         // const matchResult = allMatches.map((match, index) => Object.assign({}, {key:index}, {matchDate: match.matchDate}, {home: match.matchInfo[0].nickname}, {away: match.matchInfo[1].nickname}, {homeGoalTotal: match.matchInfo[0].shoot.goalTotal}, {awayGoalTotal: match.matchInfo[1].shoot.goalTotal}))
+        // console.log(allMatches)
         setMatchData(allMatches)
+
+
+        let possession = 0;
+        let shootTotal = 0;
+        let shootHeading = 0;
+        let shootOutPenalty = 0;
+
+        for (let i = 0; i < allMatches.length; i++){
+            if(allMatches[i].matchInfo.length === 2){
+                if(allMatches[i]['matchInfo'][0]["nickname"] === nickname){
+                    possession += allMatches[i]['matchInfo'][0]['matchDetail']['possession'];
+                    shootTotal += allMatches[i]['matchInfo'][0]['shoot']['shootTotal'];
+                    shootHeading += allMatches[i]['matchInfo'][0]['shoot']['shootHeading'];
+                    shootOutPenalty += allMatches[i]['matchInfo'][0]['shoot']['shootOutPenalty'];
+                }else {
+                    possession += allMatches[i]['matchInfo'][1]['matchDetail']['possession'];
+                    shootTotal += allMatches[i]['matchInfo'][1]['shoot']['shootTotal'];
+                    shootHeading += allMatches[i]['matchInfo'][1]['shoot']['shootHeading'];
+                    shootOutPenalty += allMatches[i]['matchInfo'][1]['shoot']['shootOutPenalty'];
+                }
+            }
+        }
+
+        setAveragePossession((possession/allMatches.length).toFixed(2));
+        setAverageHeader((shootHeading/shootTotal*100).toFixed(2));
+        setAverageLongShot((shootOutPenalty/shootTotal*100).toFixed(2));
+
+        // console.log(possession)
+
+
+        // for (let i = 0; i < this.state.matchId.length; i++) {  //나중에 배열메소드 써서 리팩토링
+        //     if(allMatch[i]['matchInfo'][0]["accessId"] === this.state.accessId){
+        //         possession += allMatch[i]['matchInfo'][0]['matchDetail']['possession'];
+        //         shootTotal += allMatch[i]['matchInfo'][0]['shoot']['shootTotal'];
+        //         shootHeading += allMatch[i]['matchInfo'][0]['shoot']['shootHeading'];
+        //         shootOutPenalty += allMatch[i]['matchInfo'][0]['shoot']['shootOutPenalty'];
+        //         MatchData.push(allMatch[i]['matchInfo']);
+        //     }
+        //     else {
+        //         possession += allMatch[i]['matchInfo'][1]['matchDetail']['possession'];
+        //         shootTotal += allMatch[i]['matchInfo'][1]['shoot']['shootTotal'];
+        //         shootHeading += allMatch[i]['matchInfo'][1]['shoot']['shootHeading'];
+        //         shootOutPenalty += allMatch[i]['matchInfo'][1]['shoot']['shootOutPenalty'];
+        //         MatchData.push(allMatch[i]['matchInfo']);
+        //     }
+        // }
+        // this.setState({
+        //         averagePossession : possession/this.state.matchId.length,
+        //         headerPortion : shootHeading/shootTotal,
+        //         OutPenaltyPortion : shootOutPenalty/shootTotal,
+        //         MatchData : MatchData
+        //     }
+
+        // console.log("allMatches: ",allMatches)
+
     }
 
 
@@ -60,7 +119,7 @@ function GameRecordPage(props) {
     }
 
     function getMatchID (AccessID){ // 고유 경기 ID들
-        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/" + AccessID + "/matches?matchtype=50&offset=0&limit=20", {
+        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/" + AccessID + "/matches?matchtype=50&offset=0&limit=50", {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -121,31 +180,50 @@ function GameRecordPage(props) {
 
     return (
 
-        <div>
-            <div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>
-                <div>
-                    <div>
-                        <Header/>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <Manager nickname = {nickname} level = {UserLevel} tier = {CareerHighTier}/>
-                    </div>
-                    <br/>
-                </div>
-                <div>
-                    <MatchTable  nickname = {nickname} matchData = {MatchData}/>
-                    <br/>
-                    <br/>
-                </div>
-
-                <div>
-                    <Footer/>
-                </div>
+        <div style={{position: 'relative', backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+            {/*<div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>*/}
+            <div>
+               <Header style ={{position: 'absolute', top: 0}}/>
             </div>
+
+            <div>
+                <Manager nickname = {nickname} level = {UserLevel} tier = {CareerHighTier} averagePossession = {AveragePossession} averageHeader = {AverageHeader} averageLongShot = {AverageLongShot}/>
+            </div>
+
+            <div>
+                <MatchTable  nickname = {nickname} matchData = {MatchData}/>
+            </div>
+
+            <div>
+                <Footer style ={{position: 'absolute', bottom: 0}}/>
+            </div>
+
         </div>
-);
+    );
 }
 
 export default GameRecordPage;
+
+
+{/*<div>*/}
+{/*    <div style={{position: 'relative' , backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0}}>*/}
+{/*        <div>*/}
+{/*            <div>*/}
+{/*                <Header/>*/}
+{/*            </div>*/}
+{/*        </div>*/}
+{/*        <div>*/}
+{/*            <div>*/}
+{/*                <Manager nickname = {nickname} level = {UserLevel} tier = {CareerHighTier} averagePossession = {AveragePossession} averageHeader = {AverageHeader} averageLongShot = {AverageLongShot}/>*/}
+{/*            </div>*/}
+{/*            <br/>*/}
+{/*        </div>*/}
+{/*        <div>*/}
+{/*                <MatchTable  nickname = {nickname} matchData = {MatchData}/>*/}
+{/*        </div>*/}
+
+{/*        <div>*/}
+{/*            <Footer/>*/}
+{/*        </div>*/}
+{/*    </div>*/}
+{/*</div>*/}

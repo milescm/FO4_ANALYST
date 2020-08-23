@@ -3,22 +3,51 @@ import SoccerLineUp from '../Squad/src';
 import spid from '../../datas/spid';
 import spposition from '../../datas/spposition';
 
+import {Card, CardTitle, CardText, CardGroup, CardDeck} from 'reactstrap';
+import image1 from '../../images/309478-P83VSI-858.jpg';
+import image2 from '../../images/audience-1866738_1920.jpg'
+import image3 from '../../images/istockphoto-1168591951-170667a.jpg';
+import image4 from '../../images/soccer-768482_1920.jpg';
+
 
 
 function MatchDetail(props) {
 
+    console.log(props.matchInfo)
+
     const homeTeam = props.matchInfo[0].player;
     const awayTeam = props.matchInfo[1].player;
 
-    console.log(homeTeam)
+    // console.log(homeTeam)
 
     const homeKeyPlayers = homeTeam.filter(function(player){
         return player.spPosition !== 28
     })
 
+    {/*평균 평점, 총 슈팅 수, 점유율, 패스 성공률, 태클 수, 블락 수*/}
+
+    let homeRatings = 0;
+    let awayRatings = 0;
+
+    // console.log(homeKeyPlayers)
+
+
+    homeKeyPlayers.map((kp) =>
+        homeRatings += kp.status.spRating
+    )
+
+    homeRatings = ((homeRatings/11).toFixed(2));
+
+
     const awayKeyPlayers = awayTeam.filter(function(player){
         return player.spPosition !== 28
-    })
+    });
+
+    awayKeyPlayers.map((kp) =>
+        awayRatings += kp.status.spRating
+    )
+
+    awayRatings = ((awayRatings/11).toFixed(2));
 
     const homeSquad = makeSquad(homeKeyPlayers.sort(function(a,b){
         return b['spPosition'] - a['spPosition'];
@@ -46,29 +75,8 @@ function MatchDetail(props) {
 
 
     function getPlayerImage(spId){
-        // const imgSrc1 = "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p" + parseInt(spId.toString(), 10) +".png";
-        // const imgSrc2 = "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/players/p" + parseInt(spId.toString(), 10) +".png";
-        // const imgSrc3 = "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p" + parseInt(spId.toString().substring(3, 9), 10) +".png";
         return "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/players/p" + parseInt(spId.toString().substring(3, 9), 10) + ".png"
     }
-
-
-    // function doesImageExists(imageSrc){
-    //     var image = new Image();
-    //
-    //     let existence;
-    //
-    //     existence = image.onload = () => {
-    //         return 1;
-    //     };
-    //
-    //     existence = image.onerror = doesImageExists()
-    //
-    //     image.src = imageSrc;
-    //     return existence;
-    // }
-
-
 
     function makeSquad(keyPlayers){
 
@@ -313,15 +321,55 @@ function MatchDetail(props) {
     }
 
     return (
-        <div style ={{display:'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <SoccerLineUp
-                size={ "big" }
-                color={ "#33620E" }
-                pattern={ "lines" }
-                homeTeam={ buildHomeTeam(homeTeam) || undefined }
-                awayTeam={ buildAwayTeam(awayTeam) || undefined }
-            />
+        <div style ={{display:'flex', justifyContent: 'center', alignItems: 'center',width: '100%', height: '100%', backgroundImage: "url(" + image1 + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', margin: 0 }}>
+            <div>
+                <SoccerLineUp style ={{display:'flex', justifyContent: 'center', alignItems: 'center'}}
+                    size={ "big" }
+                    color={ "#33620E" }
+                    pattern={ "lines" }
+                    homeTeam={ buildHomeTeam(homeTeam) || undefined }
+                    awayTeam={ buildAwayTeam(awayTeam) || undefined }
+                />
+
+                <div style ={{textAlign: 'center' , position: 'relative', top : '5px'}}>
+
+                    {/*평균 평점, 총 슈팅 수, 점유율, 패스 성공률, 태클 수, 블락 수*/}
+                    <CardDeck>
+                        <Card body inverse style={{backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>평균 평점</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{homeRatings}</span> | <span style = {{color: '#008BE0'}}>{awayRatings}</span></CardText></h4>
+                        </Card>
+
+                        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>슈팅</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{props.matchInfo[0].shoot.shootTotal}</span> | <span style = {{color: '#008BE0'}}>{props.matchInfo[1].shoot.shootTotal}</span></CardText></h4>
+                        </Card>
+
+                        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>점유율(%)</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{props.matchInfo[0].matchDetail.possession}</span> | <span style = {{color: '#008BE0'}}>{props.matchInfo[1].matchDetail.possession}</span></CardText></h4>
+                        </Card>
+
+                        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>패스 성공률(%)</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{(props.matchInfo[0].pass.passSuccess/props.matchInfo[0].pass.passTry*100).toFixed(0)}</span> | <span style = {{color: '#008BE0'}}>{(props.matchInfo[1].pass.passSuccess/props.matchInfo[1].pass.passTry*100).toFixed(0)}</span></CardText></h4>
+                        </Card>
+
+                        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>태클</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{props.matchInfo[0].defence.tackleSuccess}</span> | <span style = {{color: '#008BE0'}}>{props.matchInfo[1].defence.tackleSuccess}</span></CardText></h4>
+                        </Card>
+
+                        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#7EC508' }}>
+                            <CardTitle><b><span style = {{color: '#7EC508'}}>블락</span></b></CardTitle>
+                            <h4 style ={{color: 'white'}}><CardText><span style = {{color: '#EB5B14'}}>{props.matchInfo[0].defence.blockSuccess}</span> | <span style = {{color: '#008BE0'}}>{props.matchInfo[1].defence.blockSuccess}</span></CardText></h4>
+                        </Card>
+                    </CardDeck>
+
+                </div>
+            </div>
         </div>
+
     );
 }
 

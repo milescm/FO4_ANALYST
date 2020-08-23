@@ -86,7 +86,7 @@ class PlayerView extends Component<PlayerViewProps, PlayerViewState> {
 
     render() {
         const { player } = this.props;
-        console.log(player)
+        // console.log(player)
         const {showModal,handleOk, handleCancel} = this;
 
         return (
