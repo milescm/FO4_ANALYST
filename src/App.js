@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +9,7 @@ import {
 
 import LandingPage from './components/views/LandingPage/LandingPage'
 import GameRecordPage from './components/views/GameRecordPage/GameRecordPage'
+
 
 function App() {
   return (

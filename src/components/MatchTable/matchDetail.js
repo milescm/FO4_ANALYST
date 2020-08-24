@@ -50,22 +50,20 @@ function MatchDetail(props) {
         return a['spPosition'] - b['spPosition'];
     }));
 
-    function getPlayerName(myPlayer){ // 이름
+    function getPlayerName(myPlayer){
         let name = spid.find(player => player.id.toString().substring(3, 9) === myPlayer.spId.toString().substring(3, 9)).name.split(' ')
         return name[name.length-1]
     }
 
-    function getPlayerPosition(myPlayer){ // 이름
+    function getPlayerPosition(myPlayer){
         return spposition.find(player => player.spposition === myPlayer.spPosition).desc
     }
-
 
     function getmomRating(homeKeyPlayers, awayKeyPlayers){
         let homeMVP = Math.max.apply(Math, homeKeyPlayers.map(function(keyPlayer) { return keyPlayer.status.spRating; }))
         let awayMVP = Math.max.apply(Math, awayKeyPlayers.map(function(keyPlayer) { return keyPlayer.status.spRating; }))
         return homeMVP > awayMVP ? homeMVP : awayMVP
     }
-
 
     function getPlayerImage(spId){
         return "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/players/p" + parseInt(spId.toString().substring(3, 9), 10) + ".png"
