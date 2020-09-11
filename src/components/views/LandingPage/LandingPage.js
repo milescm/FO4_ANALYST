@@ -7,12 +7,16 @@ import Header from '../../Header/header'
 
 import image1 from '../../../images/309478-P83VSI-858.jpg';
 
+
 import { message } from 'antd';
 
 import { Input } from 'antd';
 const { Search } = Input;
 
 function LandingPage(props) {
+
+    const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.velog.io/'
+
 
 
     // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // 1707
@@ -24,7 +28,7 @@ function LandingPage(props) {
     const history = useHistory()
 
     function getUserInfo(nickname){
-        return fetch('/fifaonline4/v1.0/users?nickname=' + nickname, {
+        return fetch(BaseURL + '/fifaonline4/v1.0/users?nickname=' + nickname, {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -35,7 +39,7 @@ function LandingPage(props) {
     }
 
     function getCareerHighTier(AccessID){
-        return fetch("/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
+        return fetch(BaseURL + "/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -66,7 +70,6 @@ function LandingPage(props) {
                 });
             }
             if(careerHighTier.length !== 0){
-                console.log(careerHighTier)
                 history.push({
                     pathname: `/manager/userName=${nickname}`
                 });
