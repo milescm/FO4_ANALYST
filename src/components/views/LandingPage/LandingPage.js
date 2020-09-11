@@ -15,8 +15,9 @@ const { Search } = Input;
 
 function LandingPage(props) {
 
-    const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.velog.io/'
+    // const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.velog.io/'
 
+    const BaseURL = ''
 
 
     // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // 1707
