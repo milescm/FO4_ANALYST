@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 import {
   BrowserRouter as Router,

@@ -14,12 +14,17 @@ const { Search } = Input;
 
 function LandingPage(props) {
 
-    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNDUzMTE4OTMyIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTc3NjIwMDY0LCJleHAiOjE2NDA2OTIwNjQsImlhdCI6MTU3NzYyMDA2NH0.llBkb0hZnFwUy_5LGcTmQc2HQGC-bIpY_5f8Lralqng"
 
+    // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // 1707
+    // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0); // 803
+    //
+    // alert(w);
+
+    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMTI5MjUzMzA4MCIsImF1dGhfaWQiOiI0IiwidG9rZW5fdHlwZSI6IkFjY2Vzc1Rva2VuIiwic2VydmljZV9pZCI6IjQzMDAxMTQ4MSIsIlgtQXBwLVJhdGUtTGltaXQiOiIyMDAwMDoxMCIsIm5iZiI6MTU5OTQwMzE1OCwiZXhwIjoxNjYyNDc1MTU4LCJpYXQiOjE1OTk0MDMxNTh9.Em36KsQEW5Z1HERMKQQLFn-0l77SmCUcN8TvwEuPDcc"
     const history = useHistory()
 
     function getUserInfo(nickname){
-        return fetch('https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname=' + nickname, {
+        return fetch('/fifaonline4/v1.0/users?nickname=' + nickname, {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -30,7 +35,7 @@ function LandingPage(props) {
     }
 
     function getCareerHighTier(AccessID){
-        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
+        return fetch("/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -44,11 +49,11 @@ function LandingPage(props) {
         const userInfo = await getUserInfo(nickname)
         if (userInfo.message){
             message.info({
-                    content: '존재하지 않는 유저입니다.',
-                    style: {
-                        marginTop: '35vh',
-                    },
-                });
+                content: '존재하지 않는 유저입니다.',
+                style: {
+                    marginTop: '35vh',
+                },
+            });
         }
         else{
             const careerHighTier = await getCareerHighTier(userInfo.accessId)
@@ -61,6 +66,7 @@ function LandingPage(props) {
                 });
             }
             if(careerHighTier.length !== 0){
+                console.log(careerHighTier)
                 history.push({
                     pathname: `/manager/userName=${nickname}`
                 });

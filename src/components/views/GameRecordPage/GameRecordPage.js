@@ -68,7 +68,7 @@ function GameRecordPage(props) {
 
 
     function getUserInfo(nickname){
-        return fetch('https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname=' + nickname, {
+        return fetch('/fifaonline4/v1.0/users?nickname=' + nickname, {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -79,7 +79,7 @@ function GameRecordPage(props) {
     }
 
     function getCareerHighTier(AccessID){
-        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
+        return fetch("/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -90,7 +90,7 @@ function GameRecordPage(props) {
     }
 
     function getMatchID (AccessID){ // 고유 경기 ID들
-        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/users/" + AccessID + "/matches?matchtype=50&offset=0&limit=50", {
+        return fetch("/fifaonline4/v1.0/users/" + AccessID + "/matches?matchtype=50&offset=0&limit=50", {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -101,7 +101,7 @@ function GameRecordPage(props) {
     }
 
     function getMatchData(matchID){ // 고유 경기 ID에 대한 경기 상세 정보
-        return fetch("https://api.nexon.co.kr/fifaonline4/v1.0/matches/" + matchID, {
+        return fetch("/fifaonline4/v1.0/matches/" + matchID, {
             method: 'get',
             headers: {
                 "Authorization": key,
