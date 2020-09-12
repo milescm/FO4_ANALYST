@@ -15,7 +15,7 @@ const { Search } = Input;
 
 function LandingPage(props) {
 
-    // const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.velog.io/'
+    const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.nexon.co.kr'
 
 
 
@@ -28,7 +28,7 @@ function LandingPage(props) {
     const history = useHistory()
 
     function getUserInfo(nickname){
-        return fetch('/fifaonline4/v1.0/users?nickname=' + nickname, {
+        return fetch(BaseURL + '/fifaonline4/v1.0/users?nickname=' + nickname, {
             method: 'get',
             headers: {
                 "Authorization": key,
@@ -39,7 +39,7 @@ function LandingPage(props) {
     }
 
     function getCareerHighTier(AccessID){
-        return fetch("/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
+        return fetch(BaseURL + "/fifaonline4/v1.0/users/" + AccessID + "/maxdivision", {
             method: 'get',
             headers: {
                 "Authorization": key,
