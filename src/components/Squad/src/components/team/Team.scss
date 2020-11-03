@@ -1,0 +1,357 @@
+.team {
+
+    height: 100%;
+    width: 80%;
+    display: inline;
+
+    .player {
+
+        background-color: #EB5B14; //  avatar background color
+
+        .number { // back number color
+            color: #ffffff;
+        }
+    }
+
+    &.wide {
+        width: 80%;
+    }
+
+    &.away {
+
+        margin-left: auto;
+
+        .goalkeeper {
+            float: right;
+        }
+
+        .lines {
+            float: left;
+            flex-direction: row-reverse;
+
+            .line{
+
+
+
+            .rb {
+                position: absolute;
+                top: 13%;
+            }
+
+            .rcb {
+                position: absolute;
+                top: 33%;
+            }
+            .cb {
+                position: absolute;
+                top: 45.5%;
+            }
+            .lcb {
+                position: absolute;
+                top: 57%;
+            }
+            .lb {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+            .rwb {
+                position: absolute;
+                top: 13%;
+            }
+            .rdm {
+                position: absolute;
+                top: 33%;
+            }
+            .cdm {
+                position: absolute;
+                top: 45.5%;
+            }
+            .ldm {
+                position: absolute;
+                top: 57%;
+            }
+            .lwb {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+
+            .rm {
+                position: absolute;
+                top: 13%;
+            }
+            .rcm {
+                position: absolute;
+                top: 33%;
+            }
+            .cm {
+                position: absolute;
+                top: 45.5%;
+            }
+            .lcm {
+                position: absolute;
+                top: 57%;
+            }
+            .lm {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+
+            .ram {
+                position: absolute;
+                top: 25.5%;
+            }
+            .cam {
+                position: absolute;
+                top: 45.5%;
+            }
+            .lam {
+                position: absolute;
+                top: 65.5%;
+            }
+
+
+
+
+
+
+
+            .rw {
+                position: absolute;
+                top: 13%;
+            }
+            .rf {
+                position: absolute;
+                top: 33%;
+            }
+            .cf {
+                position: absolute;
+                top: 45.5%;
+            }
+            .lf {
+                position: absolute;
+                top: 57%;
+            }
+            .lw {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+            .rs {
+                position: absolute;
+                top: 30%;
+            }
+            .st {
+                position: absolute;
+                top: 45.5%;
+            }
+            .ls {
+                position: absolute;
+                top: 61%;
+            }
+
+            }
+        }
+
+
+
+        .player {
+
+            background-color: #008BE0;
+
+            .number { //back number
+                color: #333333;
+            }
+        }
+    }
+
+    .goalkeeper {
+        height: 100%;
+        width: 25%;
+        float: left;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .lines {
+
+        height: 100%;
+        width: 80%;
+        float: right;
+        display: flex;
+
+        .line {
+
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            //justify-content: space-evenly; // space evenly를 빼고 top을 지정?
+            align-items: center;
+
+            .sw {
+                position: absolute;
+                top: 45.5%;
+            }
+
+
+            .lb {
+                position: absolute;
+                top: 13%;
+            }
+
+            .lcb {
+                position: absolute;
+                top: 33%;
+            }
+            .cb {
+                position: absolute;
+                top: 45.5%;
+            }
+            .rcb {
+                position: absolute;
+                top: 57%;
+            }
+            .rb {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+            .lwb {
+                position: absolute;
+                top: 13%;
+            }
+            .ldm {
+                position: absolute;
+                top: 33%;
+            }
+            .cdm {
+                position: absolute;
+                top: 45.5%;
+            }
+            .rdm {
+                position: absolute;
+                top: 57%;
+            }
+            .rwb {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+
+            .lm {
+                position: absolute;
+                top: 13%;
+            }
+            .lcm {
+                position: absolute;
+                top: 33%;
+            }
+            .cm {
+                position: absolute;
+                top: 45.5%;
+            }
+            .rcm {
+                position: absolute;
+                top: 57%;
+            }
+            .rm {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+
+            .lam {
+                position: absolute;
+                top: 30%;
+            }
+            .cam {
+                position: absolute;
+                top: 45.5%;
+            }
+            .ram {
+                position: absolute;
+                top: 60%;
+            }
+
+
+
+
+
+
+
+            .lw {
+                position: absolute;
+                top: 13%;
+            }
+            .lf {
+                position: absolute;
+                top: 33%;
+            }
+            .cf {
+                position: absolute;
+                top: 45.5%;
+            }
+            .rf {
+                position: absolute;
+                top: 57%;
+            }
+            .rw {
+                position: absolute;
+                top: 79%;
+            }
+
+
+
+
+
+            .ls {
+                position: absolute;
+                top: 30%;
+            }
+            .st {
+                position: absolute;
+                top: 45.5%;
+            }
+            .rs {
+                position: absolute;
+                top: 61%;
+            }
+        }
+    }
+
+
+}

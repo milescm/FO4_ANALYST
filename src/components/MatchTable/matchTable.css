@@ -1,0 +1,9 @@
+.table-row-win {
+    background-color: #A3CFEC;
+}
+.table-row-draw {
+    background-color: lightgray;
+}
+.table-row-lose {
+    background-color: #E2B6B3;
+}
