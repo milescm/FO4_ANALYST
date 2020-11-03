@@ -3,14 +3,14 @@ import Header from '../../Header/header'
 import Footer from '../../Footer/footer'
 import Manager from '../../Manager/manager'
 import MatchTable from '../../MatchTable/matchTable';
+import key from '../../config/key'
 
 // import image from '../../../images/istockphoto-1168591951-170667a.jpg'
 import image1 from "../../../images/309478-P83VSI-858.jpg";
 
 
 function GameRecordPage(props) {
-
-    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNDUzMTE4OTMyIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTc3NjIwMDY0LCJleHAiOjE2NDA2OTIwNjQsImlhdCI6MTU3NzYyMDA2NH0.llBkb0hZnFwUy_5LGcTmQc2HQGC-bIpY_5f8Lralqng"
+    const key = key;
     const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.nexon.co.kr'
 
     const nickname = props.match.params.nickname;

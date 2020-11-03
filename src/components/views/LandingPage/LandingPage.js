@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 
 import Footer from '../../Footer/footer'
 import Header from '../../Header/header'
+import key from '../../config/key'
 
 import image1 from '../../../images/309478-P83VSI-858.jpg';
 
@@ -24,7 +25,7 @@ function LandingPage(props) {
     //
     // alert(w);
 
-    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMTI5MjUzMzA4MCIsImF1dGhfaWQiOiI0IiwidG9rZW5fdHlwZSI6IkFjY2Vzc1Rva2VuIiwic2VydmljZV9pZCI6IjQzMDAxMTQ4MSIsIlgtQXBwLVJhdGUtTGltaXQiOiIyMDAwMDoxMCIsIm5iZiI6MTU5OTQwMzE1OCwiZXhwIjoxNjYyNDc1MTU4LCJpYXQiOjE1OTk0MDMxNTh9.Em36KsQEW5Z1HERMKQQLFn-0l77SmCUcN8TvwEuPDcc"
+    const key = key;
     const history = useHistory()
 
     function getUserInfo(nickname){
