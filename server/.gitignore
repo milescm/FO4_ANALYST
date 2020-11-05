@@ -24,4 +24,4 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
-../server/config/dev.js
+/config

@@ -28,7 +28,7 @@ function App() {
               <LandingPage/>
             </Route>
 
-          <Route path="/manager/userName=:nickname" component ={GameRecordPage}/>
+          <Route path="/manager/userName=:managerName" component ={GameRecordPage}/>
 
         </Switch>
       </div>
