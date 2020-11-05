@@ -14,8 +14,10 @@ import { message } from 'antd';
 import { Input } from 'antd';
 const { Search } = Input;
 
-function LandingPage(props) {
 
+
+function LandingPage(props) {
+    const key = key;
     const BaseURL = process.env.NODE_ENV === 'development' ? '' : 'https://api.nexon.co.kr'
 
 
@@ -25,7 +27,7 @@ function LandingPage(props) {
     //
     // alert(w);
 
-    const key = key;
+
     const history = useHistory()
 
     function getUserInfo(nickname){

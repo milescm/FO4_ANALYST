@@ -23,13 +23,13 @@
         "suppressImplicitAnyIndexErrors": true
     },
     "include": [
-        "src"
+      "src"
     ],
     "exclude": [
         "node_modules",
         "build",
         "dist",
         "example",
-        "rollup.config.js"
+      "rollup.config.js"
     ]
 }

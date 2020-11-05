@@ -1,7 +1,7 @@
 import React from 'react';
 import SoccerLineUp from '../Squad/src';
-import spid from '../../datas/spid';
-import spposition from '../../datas/spposition';
+import spid from '../../datas/spid.json';
+import spposition from '../../datas/spposition.json';
 
 import {Card, CardTitle, CardText, CardDeck} from 'reactstrap';
 import image1 from '../../images/309478-P83VSI-858.jpg';
