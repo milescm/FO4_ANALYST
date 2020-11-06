@@ -7,7 +7,7 @@ import MatchTable from '../../MatchTable/matchTable';
 // import image from '../../../images/istockphoto-1168591951-170667a.jpg'
 import image1 from "../../../images/309478-P83VSI-858.jpg";
 
-import { getManagerInfo} from '../../../api/api';
+import { getManagerInfo, getCareerHighTier} from '../../../api/api';
 
 function GameRecordPage(props) {
 
@@ -24,10 +24,15 @@ function GameRecordPage(props) {
     useEffect(() => {
         console.log("GameRecordPage - useEffect Start.")
         // getManagerInfo(managerName).then(async (res) => {
-        getManagerInfo(managerName).then( (res) => {
+        getManagerInfo(managerName).then( async (res) => {
             //todo : getManagerInfo api 호출하면서 managerName 넘긴 후... response 처리하기
-            console.log(res)
+            const { accessId, nickname, level } = res.data;
+            setUserLevel(level)
+            const tier = await getCareerHighTier(accessId)
+            console.log(tier)
+
         });
+
     }, [managerName])
 
 

@@ -2,21 +2,61 @@ const express = require("express");
 const asyncify = require('express-asyncify');
 const router = asyncify(express.Router());
 const axios = require("axios");
-
 const key = require("../config/key").key;
-// const key2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNDUzMTE4OTMyIiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTc3NjIwMDY0LCJleHAiOjE2NDA2OTIwNjQsImlhdCI6MTU3NzYyMDA2NH0.llBkb0hZnFwUy_5LGcTmQc2HQGC-bIpY_5f8Lralqng"
+const baseURL = "https://api.nexon.co.kr/fifaonline4/v1.0"
 
-// console.log(key1.key)
-// console.log(key2)
 
-router.get("/userName=search?:managerName",  async (req, res) => { //todo: 연결은 잘 됐는데,,
+
+
+router.get("/userName=search?:managerName",  async (req, res) => {
     const managerName = encodeURI(req.query.managerName);
-    const userInfo = await axios.get(`https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname=${managerName}`, {
+    const managerInfo = [];
+    await axios.get(`${baseURL}/users?nickname=${managerName}`, {
         headers: {
             'Authorization': key
         }
-    })
-    console.log(userInfo)
+    }).then((res) => {
+        managerInfo.push(res.data);
+    }).catch((err) => res.json({ err }));
+
+    const {
+        accessId,
+        nickname,
+        level
+    } = managerInfo[0];
+
+    res.json({
+        accessId,
+        nickname,
+        level
+    });
+});
+
+// BaseURL + "/fifaonline4/v1.0/users/" + AccessID + "/maxdivision",
+router.get("/searchTier?:accessId",  async (req, res) => {
+    const managerAccessId = req.query.accessId
+    const Tier = [];
+    await axios.get(`${baseURL}/users/${managerAccessId}/maxdivision`, {
+        headers: {
+            'Authorization': key
+        }
+    }).then((res) => {
+        Tier.push(res.data);
+    }).catch((err) => res.json({ err }));
+
+    console.log(Tier)
+
+    // const {
+    //     accessId,
+    //     nickname,
+    //     level
+    // } = managerInfo[0];
+    //
+    // res.json({
+    //     accessId,
+    //     nickname,
+    //     level
+    // });
 });
 
 
