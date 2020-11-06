@@ -49,6 +49,5 @@
     "css-loader": "^4.2.1",
     "style-loader": "^1.2.1",
     "typescript": "^3.9.7"
-  },
-  "proxy": "https://api.nexon.co.kr"
+  }
 }

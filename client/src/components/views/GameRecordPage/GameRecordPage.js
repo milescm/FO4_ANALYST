@@ -22,9 +22,11 @@ function GameRecordPage(props) {
     // const [AverageLongShot, setAverageLongShot] = useState(0)
 
     useEffect(() => {
-        // getManagerInfo(managerName).then(async(res) => console.log(res))
-            getManagerInfo(managerName).then(async (res) => {
-            console.log(res.data)
+        console.log("GameRecordPage - useEffect Start.")
+        // getManagerInfo(managerName).then(async (res) => {
+        getManagerInfo(managerName).then( (res) => {
+            //todo : getManagerInfo api 호출하면서 managerName 넘긴 후... response 처리하기
+            console.log(res)
         });
     }, [managerName])
 
