@@ -2,11 +2,8 @@ const express = require("express");
 const asyncify = require('express-asyncify');
 const router = asyncify(express.Router());
 const axios = require("axios");
-const key = require("../config/key").key;
+// const key = require("../config/key").key;
 const baseURL = "https://api.nexon.co.kr/fifaonline4/v1.0"
-
-
-
 
 
 router.get("/userName=search?:managerName",  async (req, res) => {
