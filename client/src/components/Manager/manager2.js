@@ -6,7 +6,6 @@ import { Card, CardTitle, CardText,CardDeck} from 'reactstrap';
 
 function Manager(props) { //  매니저(감독) 기본 정보 : 닉네임, 레벨, 역대 최고 티어 ///////// 평균 점유율, 헤더 시도율, 중거리 시도율
 
-    // console.log(props)
 
     return (
         <div style ={{textAlign: 'center', margin: '0 auto', width: '75%', position: 'relative', top: '10px'}}>

@@ -17,7 +17,6 @@ const managerRoute = require("./api/index");
 app.use("/manager", managerRoute)
 
 
-
 app.get('/', (req, res) => {
   res.send('express 백엔드 정상 동작!');
 });

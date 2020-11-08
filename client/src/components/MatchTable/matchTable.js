@@ -9,6 +9,8 @@ import { Tabs } from 'antd';
 
 function MatchTable(props) {
 
+    // console.log(props)
+
     const { TabPane } = Tabs;
     // const [matchResult, setMatchResult] = useState(null)
 
