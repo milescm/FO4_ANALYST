@@ -70,7 +70,6 @@ router.get("/getMatchData?:matchID",  async (req, res) => {
     }).then((res) => {
         matchData.push(res.data);
     }).catch((err) => res.json({ err }));
-    // console.log("matchData: "+matchData)
     res.json(matchData)
 });
 
